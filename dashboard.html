@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - StartupFund</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>StartupFund</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="user-profile">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <h3 id="userName">Loading...</h3>
+                <p id="userEmail">Loading...</p>
+            </div>
+            <div class="menu-items">
+                <button class="menu-item active" data-section="applications">
+                    <i class="fas fa-file-alt"></i> My Applications
+                </button>
+                <button class="menu-item" data-section="programs">
+                    <i class="fas fa-list"></i> Available Programs
+                </button>
+                <button class="menu-item" data-section="profile">
+                    <i class="fas fa-user"></i> Profile Settings
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Applications Section -->
+            <section id="applications" class="content-section active">
+                <h2>My Applications</h2>
+                <div class="applications-list" id="applicationsList">
+                    <!-- Applications will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Programs Section -->
+            <section id="programs" class="content-section">
+                <h2>Available Programs</h2>
+                <div class="search-filter">
+                    <select id="programFilter">
+                        <option value="all">All Categories</option>
+                        <option value="incubator">Incubators</option>
+                        <option value="accelerator">Accelerators</option>
+                        <option value="government">Government</option>
+                        <option value="angel">Angel Investors</option>
+                        <option value="venture_capital">Venture Capital</option>
+                    </select>
+                    <select id="locationFilter">
+                        <option value="all">All Locations</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                    </select>
+                </div>
+                <div class="programs-grid" id="programsList">
+                    <!-- Programs will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile" class="content-section">
+                <h2>Profile Settings</h2>
+                <div class="profile-form">
+                    <div class="form-group">
+                        <label for="profileName">Name</label>
+                        <input type="text" id="profileName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileEmail">Email</label>
+                        <input type="email" id="profileEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password</label>
+                        <input type="password" id="currentPassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword">
+                    </div>
+                    <button class="save-btn" id="saveProfile">Save Changes</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 

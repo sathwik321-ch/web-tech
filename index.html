@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship Helpdesk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <h1>StartupFund</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#incubators">Incubators</a>
+            <a href="#accelerators">Accelerators</a>
+            <a href="#government">Government</a>
+            <a href="#angel-investors">Angel Investors</a>
+            <a href="#sbdcs">SBDCs</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="filter-controls">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="incubator" data-scroll="#incubators">Incubators</button>
+            <button class="filter-btn" data-filter="accelerator" data-scroll="#accelerators">Accelerators</button>
+            <button class="filter-btn" data-filter="government" data-scroll="#government">Government</button>
+            <button class="filter-btn" data-filter="angel" data-scroll="#angel-investors">Angel Investors</button>
+            <button class="filter-btn" data-filter="sbdc" data-scroll="#sbdcs">SBDCs</button>
+            <button class="filter-btn contact-btn" data-scroll="#contact">Contact</button>
+        </div>
+        <select id="sortSelect" class="sort-select">
+            <option value="name">Sort by Name</option>
+            <option value="funding">Sort by Funding</option>
+            <option value="equity">Sort by Equity</option>
+        </select>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero" data-aos="fade-up">
+            <h1>Find the Perfect Funding for Your Startup</h1>
+            <p>Connecting entrepreneurs with investors, grants, and resources</p>
+            <a href="#contact" class="cta-btn">Get Started</a>
+        </div>
+        <div class="funding-types" data-aos="fade-up">
+            <div class="funding-card" data-type="angelInvestors">
+                <i class="fas fa-angel"></i>
+                <h3>Angel Investors</h3>
+                <p>Connect with high-net-worth individuals ready to invest in promising startups.</p>
+            </div>
+            <div class="funding-card" data-type="ventureCapital">
+                <i class="fas fa-chart-line"></i>
+                <h3>Venture Capital</h3>
+                <p>Access institutional funding for high-growth potential startups.</p>
+            </div>
+            <div class="funding-card" data-type="crowdfunding">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Crowdfunding</h3>
+                <p>Leverage the power of the crowd to fund your innovative ideas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Incubators Section -->
+    <section id="incubators">
+        <h2 data-aos="fade-up">Top Incubators</h2>
+        <div class="program-cards">
+            <div class="program-card" data-type="incubator">
+                <h3>T-Hub</h3>
+                <p>India's largest startup incubator, providing mentorship, funding, and resources to early-stage startups.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹50 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 5%</span>
+                </div>
+                <button class="learn-more-btn" data-program="t-hub">Learn More</button>
+                <button class="apply-now-btn" data-program="t-hub">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="incubator">
+                <h3>CIIE.CO</h3>
+                <p>Innovation hub at IIM Ahmedabad, supporting startups with funding, mentorship, and incubation services.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹25 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 3%</span>
+                </div>
+                <button class="learn-more-btn" data-program="ciie">Learn More</button>
+                <button class="apply-now-btn" data-program="ciie">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="incubator">
+                <h3>NSRCEL</h3>
+                <p>Startup incubator at IIM Bangalore, offering funding, mentorship, and workspace to innovative startups.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹30 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 4%</span>
+                </div>
+                <button class="learn-more-btn" data-program="nsrcel">Learn More</button>
+                <button class="apply-now-btn" data-program="nsrcel">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accelerators Section -->
+    <section id="accelerators">
+        <h2 data-aos="fade-up">Accelerator Programs</h2>
+        <div class="program-cards">
+            <div class="program-card" data-type="accelerator">
+                <h3>Venture Catalysts</h3>
+                <p>India's first integrated incubator and accelerator platform.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹1 Crore</span>
+                    <span><i class="fas fa-chart-pie"></i> 8%</span>
+                </div>
+                <button class="learn-more-btn" data-program="venture-catalysts">Learn More</button>
+                <button class="apply-now-btn" data-program="venture-catalysts">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="accelerator">
+                <h3>xto10x</h3>
+                <p>Growth accelerator for scaling startups, founded by ex-Flipkart leaders.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹75 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 7%</span>
+                </div>
+                <button class="learn-more-btn" data-program="xto10x">Learn More</button>
+                <button class="apply-now-btn" data-program="xto10x">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="accelerator">
+                <h3>Startup Oasis</h3>
+                <p>Jaipur-based accelerator supporting early-stage startups.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹50 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 10%</span>
+                </div>
+                <button class="learn-more-btn" data-program="startup-oasis">Learn More</button>
+                <button class="apply-now-btn" data-program="startup-oasis">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Support Section -->
+    <section id="government">
+        <h2 data-aos="fade-up">Government Support</h2>
+        <div class="program-cards">
+            <div class="program-card" data-type="government">
+                <h3>Startup India Seed Fund</h3>
+                <p>Government initiative providing financial assistance to early-stage startups.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹20 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 0%</span>
+                </div>
+                <button class="learn-more-btn" data-program="startup-india">Learn More</button>
+                <button class="apply-now-btn" data-program="startup-india">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="government">
+                <h3>MSME Loan Scheme</h3>
+                <p>Government-backed loans for micro, small and medium enterprises.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹50 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 0%</span>
+                </div>
+                <button class="learn-more-btn" data-program="msme">Learn More</button>
+                <button class="apply-now-btn" data-program="msme">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="government">
+                <h3>State Startup Policies</h3>
+                <p>Various state government initiatives and grants for startups.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹25 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 0%</span>
+                </div>
+                <button class="learn-more-btn" data-program="state">Learn More</button>
+                <button class="apply-now-btn" data-program="state">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Angel Investors Section -->
+    <section id="angel-investors">
+        <h2 data-aos="fade-up">Angel Investors</h2>
+        <div class="program-cards">
+            <div class="program-card" data-type="angel">
+                <h3>Indian Angel Network</h3>
+                <p>India's largest network of angel investors with over 500 members across 12 cities.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹50 Lakhs - ₹2 Crores</span>
+                    <span><i class="fas fa-chart-pie"></i> 10-25%</span>
+                </div>
+                <button class="learn-more-btn" data-program="ian">Learn More</button>
+                <button class="apply-now-btn" data-program="ian">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="angel">
+                <h3>Mumbai Angels</h3>
+                <p>One of India's most active angel networks with investments in over 100 startups.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹25 Lakhs - ₹1 Crore</span>
+                    <span><i class="fas fa-chart-pie"></i> 5-20%</span>
+                </div>
+                <button class="learn-more-btn" data-program="mumbai-angels">Learn More</button>
+                <button class="apply-now-btn" data-program="mumbai-angels">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="angel">
+                <h3>Lead Angels</h3>
+                <p>Pan-India angel network focused on early-stage investments in technology startups.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹20 Lakhs - ₹75 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 8-15%</span>
+                </div>
+                <button class="learn-more-btn" data-program="lead-angels">Learn More</button>
+                <button class="apply-now-btn" data-program="lead-angels">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Small Business Development Centers Section -->
+    <section id="sbdcs">
+        <h2 data-aos="fade-up">Small Business Development Centers</h2>
+        <div class="program-cards">
+            <div class="program-card" data-type="sbdc">
+                <h3>MSME Development Centers</h3>
+                <p>Government-supported centers providing training, mentoring, and resources for small businesses.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹10 Lakhs - ₹50 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 0%</span>
+                </div>
+                <button class="learn-more-btn" data-program="msme-dev">Learn More</button>
+                <button class="apply-now-btn" data-program="msme-dev">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="sbdc">
+                <h3>Women Entrepreneurship Centers</h3>
+                <p>Specialized centers supporting women entrepreneurs with training and funding opportunities.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹5 Lakhs - ₹25 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 0%</span>
+                </div>
+                <button class="learn-more-btn" data-program="women-entrepreneurship">Learn More</button>
+                <button class="apply-now-btn" data-program="women-entrepreneurship">Apply Now</button>
+            </div>
+            <div class="program-card" data-type="sbdc">
+                <h3>Rural Business Hubs</h3>
+                <p>Centers focused on developing entrepreneurship in rural areas with specialized support.</p>
+                <div class="program-meta">
+                    <span><i class="fas fa-money-bill-wave"></i> ₹2 Lakhs - ₹10 Lakhs</span>
+                    <span><i class="fas fa-chart-pie"></i> 0%</span>
+                </div>
+                <button class="learn-more-btn" data-program="rural-business">Learn More</button>
+                <button class="apply-now-btn" data-program="rural-business">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 98765 43210</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>support@startupfund.in</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Startup Hub<br>Hitech City, Hyderabad<br>Telangana - 500081</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" required placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Details Modal -->
+    <div id="programModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="program-stats">
+                    <span id="modalFunding"></span>
+                    <span id="modalEquity"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="details-section">
+                    <h3>Eligibility</h3>
+                    <ul id="modalEligibility"></ul>
+                </div>
+                <div class="details-section">
+                    <h3>Process</h3>
+                    <ul id="modalProcess"></ul>
+                </div>
+                <div class="details-section">
+                    <h3>Benefits</h3>
+                    <ul id="modalBenefits"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Form Modal -->
+    <div id="applicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeApplicationBtn">&times;</span>
+            <h2 id="applicationTitle">Apply for <span id="programName"></span></h2>
+            <div class="modal-body">
+                <form id="applicationForm" class="application-form" enctype="multipart/form-data">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pan">PAN Number</label>
+                            <input type="text" id="pan" name="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Startup Details</h3>
+                        <div class="form-group">
+                            <label for="startupName">Startup Name</label>
+                            <input type="text" id="startupName" name="startupName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="startupStage">Startup Stage</label>
+                            <select id="startupStage" name="startupStage" required>
+                                <option value="">Select Stage</option>
+                                <option value="idea">Idea Stage</option>
+                                <option value="mvp">MVP Stage</option>
+                                <option value="early">Early Stage</option>
+                                <option value="growth">Growth Stage</option>
+                                <option value="scaling">Scaling Stage</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="industry">Industry</label>
+                            <select id="industry" name="industry" required>
+                                <option value="">Select Industry</option>
+                                <option value="fintech">FinTech</option>
+                                <option value="healthtech">HealthTech</option>
+                                <option value="edtech">EdTech</option>
+                                <option value="agritech">AgriTech</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Startup Description</label>
+                            <textarea id="description" name="description" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Financial Information</h3>
+                        <div class="form-group">
+                            <label for="fundingNeeded">Funding Required (₹)</label>
+                            <input type="number" id="fundingNeeded" name="fundingNeeded" required min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="revenue">Current Annual Revenue (₹)</label>
+                            <input type="number" id="revenue" name="revenue" required min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="teamSize">Team Size</label>
+                            <input type="number" id="teamSize" name="teamSize" required min="1">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Documents</h3>
+                        <div class="form-group">
+                            <label for="pitchDeck">Pitch Deck (PDF)</label>
+                            <input type="file" id="pitchDeck" name="pitchDeck" accept=".pdf" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="financialProjections">Financial Projections (PDF)</label>
+                            <input type="file" id="financialProjections" name="financialProjections" accept=".pdf" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="incorporationDoc">Incorporation Document (PDF)</label>
+                            <input type="file" id="incorporationDoc" name="incorporationDoc" accept=".pdf" required>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>StartupFund India</h3>
+                <p>Empowering Indian entrepreneurs with funding and resources.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#incubators">Incubators</a>
+                <a href="#accelerators">Accelerators</a>
+                <a href="#government">Government Support</a>
+                <a href="#angel-investors">Angel Investors</a>
+                <a href="#sbdcs">SBDCs</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="footer-section">
+                <h3>Our Partners</h3>
+                <a href="#">NASSCOM</a>
+                <a href="#">TiE</a>
+                <a href="#">CII</a>
+                <a href="#">FICCI</a>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StartupFund India. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="content.js"></script>
+</body>
+</html>

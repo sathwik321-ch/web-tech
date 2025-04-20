@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accelerators - StartupFund</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <h1>StartupFund</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="incubators.html">Incubators</a>
+            <a href="accelerators.html" class="active">Accelerators</a>
+            <a href="government.html">Government</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Accelerator Programs</h1>
+            <p>Fast-track your startup's growth with India's top accelerator programs</p>
+        </div>
+    </section>
+
+    <!-- Featured Accelerators -->
+    <section class="featured-programs">
+        <div class="container">
+            <h2 data-aos="fade-up">Featured Accelerators</h2>
+            <div class="program-grid">
+                <div class="program-card featured" data-aos="fade-up">
+                    <div class="program-image">
+                        <img src="../images/venture.jpg" alt="Venture Catalysts">
+                    </div>
+                    <div class="program-content">
+                        <h3>Venture Catalysts</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+                        <p class="description">India's first integrated incubator and accelerator platform, offering comprehensive support for early-stage startups.</p>
+                        <div class="program-meta">
+                            <span><i class="fas fa-money-bill-wave"></i> ₹1 Crore</span>
+                            <span><i class="fas fa-chart-pie"></i> 8%</span>
+                            <span><i class="fas fa-clock"></i> 3 months</span>
+                        </div>
+                        <div class="program-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Intensive mentorship program</li>
+                                <li>Direct investor access</li>
+                                <li>Global market exposure</li>
+                                <li>Technical infrastructure</li>
+                            </ul>
+                        </div>
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="program-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-image">
+                        <img src="../images/xto10x.jpg" alt="xto10x">
+                    </div>
+                    <div class="program-content">
+                        <h3>xto10x</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka</p>
+                        <p class="description">Growth accelerator founded by ex-Flipkart leaders, focusing on scaling startups through proven methodologies.</p>
+                        <div class="program-meta">
+                            <span><i class="fas fa-money-bill-wave"></i> ₹75 Lakhs</span>
+                            <span><i class="fas fa-chart-pie"></i> 7%</span>
+                            <span><i class="fas fa-clock"></i> 6 months</span>
+                        </div>
+                        <div class="program-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Growth strategy consulting</li>
+                                <li>Operational excellence</li>
+                                <li>Leadership development</li>
+                                <li>Market expansion support</li>
+                            </ul>
+                        </div>
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="program-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-image">
+                        <img src="../images/startup-oasis.jpg" alt="Startup Oasis">
+                    </div>
+                    <div class="program-content">
+                        <h3>Startup Oasis</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan</p>
+                        <p class="description">Jaipur-based accelerator supporting early-stage startups with a focus on innovation and sustainable growth.</p>
+                        <div class="program-meta">
+                            <span><i class="fas fa-money-bill-wave"></i> ₹50 Lakhs</span>
+                            <span><i class="fas fa-chart-pie"></i> 10%</span>
+                            <span><i class="fas fa-clock"></i> 4 months</span>
+                        </div>
+                        <div class="program-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Product-market fit validation</li>
+                                <li>Business model refinement</li>
+                                <li>Investor readiness</li>
+                                <li>Regional market access</li>
+                            </ul>
+                        </div>
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Details Modal -->
+    <div id="programModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+                <div class="program-details">
+                    <div class="detail-item">
+                        <span id="modalFunding"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span id="modalEquity"></span>
+                    </div>
+                </div>
+                <div class="program-info">
+                    <div class="info-section">
+                        <h3><i class="fas fa-check-circle"></i> Eligibility</h3>
+                        <ul id="modalEligibility"></ul>
+                    </div>
+                    <div class="info-section">
+                        <h3><i class="fas fa-tasks"></i> Process</h3>
+                        <ul id="modalProcess"></ul>
+                    </div>
+                    <div class="info-section">
+                        <h3><i class="fas fa-gift"></i> Benefits</h3>
+                        <ul id="modalBenefits"></ul>
+                    </div>
+                </div>
+                <button id="modalApply" class="apply-btn">Apply Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Form Modal -->
+    <div id="applicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeApplicationBtn">&times;</span>
+            <h2 id="applicationTitle">Apply for <span id="programName"></span></h2>
+            <div class="modal-body">
+                <form id="applicationForm" class="application-form" enctype="multipart/form-data">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pan">PAN Number</label>
+                            <input type="text" id="pan" name="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Startup Details</h3>
+                        <div class="form-group">
+                            <label for="startupName">Startup Name</label>
+                            <input type="text" id="startupName" name="startupName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="startupStage">Startup Stage</label>
+                            <select id="startupStage" name="startupStage" required>
+                                <option value="">Select Stage</option>
+                                <option value="idea">Idea Stage</option>
+                                <option value="mvp">MVP Stage</option>
+                                <option value="early">Early Stage</option>
+                                <option value="growth">Growth Stage</option>
+                                <option value="scaling">Scaling Stage</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="industry">Industry</label>
+                            <select id="industry" name="industry" required>
+                                <option value="">Select Industry</option>
+                                <option value="fintech">FinTech</option>
+                                <option value="healthtech">HealthTech</option>
+                                <option value="edtech">EdTech</option>
+                                <option value="agritech">AgriTech</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Startup Description</label>
+                            <textarea id="description" name="description" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Financial Information</h3>
+                        <div class="form-group">
+                            <label for="fundingNeeded">Funding Required (₹)</label>
+                            <input type="number" id="fundingNeeded" name="fundingNeeded" required min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="revenue">Current Annual Revenue (₹)</label>
+                            <input type="number" id="revenue" name="revenue" required min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="teamSize">Team Size</label>
+                            <input type="number" id="teamSize" name="teamSize" required min="1">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Documents</h3>
+                        <div class="form-group">
+                            <label for="pitchDeck">Pitch Deck (PDF)</label>
+                            <input type="file" id="pitchDeck" name="pitchDeck" accept=".pdf" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="financialProjections">Financial Projections (PDF)</label>
+                            <input type="file" id="financialProjections" name="financialProjections" accept=".pdf" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="incorporationDoc">Incorporation Document (PDF)</label>
+                            <input type="file" id="incorporationDoc" name="incorporationDoc" accept=".pdf" required>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>StartupFund India</h3>
+                <p>Empowering Indian entrepreneurs with funding and resources.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="../index.html">Home</a>
+                <a href="incubators.html">Incubators</a>
+                <a href="accelerators.html">Accelerators</a>
+                <a href="government.html">Government Support</a>
+                <a href="../index.html#contact">Contact Us</a>
+            </div>
+            <div class="footer-section">
+                <h3>Our Partners</h3>
+                <a href="#">NASSCOM</a>
+                <a href="#">TiE</a>
+                <a href="#">CII</a>
+                <a href="#">FICCI</a>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StartupFund India. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html> 

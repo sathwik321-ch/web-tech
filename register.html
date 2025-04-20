@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Startup Funding Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Create an Account</h2>
+            <div id="errorMessage" class="error-message"></div>
+            
+            <form id="registerForm" class="registration-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required 
+                           pattern="[A-Za-z\s]{2,50}" 
+                           title="Name should contain only letters and spaces (2-50 characters)">
+                    <small class="form-text">Enter your full name as it appears on official documents</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <small class="form-text">We'll never share your email with anyone else</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required 
+                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                           title="Password must be at least 8 characters long and include uppercase, lowercase, number and special character">
+                    <small class="form-text">Password must be at least 8 characters long</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password *</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                    <small class="form-text">Re-enter your password to confirm</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="user_type">I am a *</label>
+                    <select id="user_type" name="user_type" required>
+                        <option value="">Select your role</option>
+                        <option value="startup">Startup Founder</option>
+                        <option value="investor">Investor</option>
+                        <option value="mentor">Mentor</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a> *</label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter for updates and opportunities</label>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-primary">Register</button>
+            </form>
+
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+</html> 
